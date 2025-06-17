@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative h-12 w-40">
+            <div className="relative h-20 w-56">
               <Image src="/images/ardalogo.png" alt="ARDA Seeds Logo" fill className="object-contain" />
             </div>
           </Link>
@@ -94,7 +94,7 @@ export default function Header() {
               <Link href="/quote">Request Quote</Link>
             </Button>
             <Button asChild className="bg-green-700 hover:bg-green-800">
-              <Link href="/register">Register</Link>
+              <Link href="/register">Grower Registration</Link>
             </Button>
           </div>
 
