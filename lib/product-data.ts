@@ -108,12 +108,13 @@ export const wheatProducts: Product[] = [
       "Semi dwarf (81cm) with semi erect growth habit",
       "Large grain size (46g per thousand grains)",
       "11.4% grain protein content",
-      "Good disease resistance",
+      "Good disease resistance to Leaf Rust, Stem Rust and Powdery Mildew",
     ],
     regions: ["Highveld", "Middleveld", "Lowveld"],
     image: "/images/wheat-ncema.jpg",
     featured: true,
   },
+
 ]
 
 // Add more product categories as needed

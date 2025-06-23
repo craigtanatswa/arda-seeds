@@ -1,103 +1,216 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { notFound } from 'next/navigation';
+import { wheatProducts } from '@/lib/product-data';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, ArrowLeft } from "lucide-react"
-import { maizeProducts } from "@/lib/product-data"
 
 interface ProductPageProps {
-  params: {
-    id: string
-  }
+  params: { id: string };
 }
 
-export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = maizeProducts.find((p) => p.id === params.id)
+export default function WheatProductPage({ params }: ProductPageProps) {
+  const product = wheatProducts.find(p => p.id === params.id);
 
   if (!product) {
-    return {
-      title: "Product Not Found | ARDA Seeds",
-    }
-  }
-
-  return {
-    title: `${product.name} | ARDA Seeds`,
-    description: product.shortDescription,
-  }
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = maizeProducts.find((p) => p.id === params.id)
-
-  if (!product) {
-    notFound()
+    notFound();
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Link href="/products/maize" className="flex items-center text-green-700 mb-6 hover:underline">
-        <ArrowLeft className="h-4 w-4 mr-1" /> Back to Maize Products
+    <div className="container mx-auto px-4 py-12">
+      {/* Breadcrumb Navigation */}
+      <div className="text-sm text-gray-500 mb-6">
+        <Link href="/" className="hover:text-green-700">Home</Link> / 
+        <Link href="/products" className="hover:text-green-700 ml-1">Products</Link> / 
+        <Link href="/products/wheat" className="hover:text-green-700 ml-1">Wheat</Link> / 
+        <span className="text-gray-900 ml-1">{product.name}</span>
+      </div>
+
+      {/* Back Button */}
+      <Link 
+        href="/products/wheat" 
+        className="inline-flex items-center text-green-700 mb-6 hover:text-green-800"
+      >
+        <ArrowLeft className="mr-2 h-4 w-4" /> Back to Wheat Products
       </Link>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-          <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
+      {/* Product Content */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        {/* Product Image */}
+        <div className="relative h-96 rounded-xl overflow-hidden border border-gray-200">
+          <img 
+            src={product.image} 
+            alt={product.name}
+            className="w-full h-full object-cover"
+          />
         </div>
 
+        {/* Product Details */}
         <div>
           <div className="flex items-center gap-3 mb-2">
             <h1 className="text-3xl font-bold">{product.name}</h1>
             {product.featured && <Badge className="bg-green-700">Featured</Badge>}
           </div>
-
+          
           <p className="text-gray-700 mb-6">{product.fullDescription}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Maturity Period</h3>
-              <p>{product.maturity}</p>
-            </div>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Yield Potential</h3>
-              <p>{product.yieldPotential}</p>
-            </div>
-          </div>
-
           <div className="mb-6">
-            <h3 className="font-semibold mb-2">Key Features</h3>
+            <h2 className="text-xl font-bold mb-3">Key Features</h2>
             <ul className="space-y-2">
               {product.features.map((feature, index) => (
                 <li key={index} className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-green-700 mr-2 flex-shrink-0 mt-0.5" />
+                  <svg className="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
                   <span>{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="mb-8">
-            <h3 className="font-semibold mb-2">Recommended Regions</h3>
-            <div className="flex flex-wrap gap-2">
-              {product.regions.map((region, index) => (
-                <Badge key={index} variant="outline" className="border-green-700 text-green-700">
-                  {region}
-                </Badge>
-              ))}
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="bg-green-50 p-3 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-1">Maturity Period</h3>
+              <p className="text-gray-700">{product.maturity}</p>
+            </div>
+            <div className="bg-green-50 p-3 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-1">Yield Potential</h3>
+              <p className="text-gray-700">{product.yieldPotential}</p>
+            </div>
+            <div className="bg-green-50 p-3 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-1">Suitable Regions</h3>
+              <p className="text-gray-700">{product.regions.join(', ')}</p>
+            </div>
+            <div className="bg-green-50 p-3 rounded-lg">
+              <h3 className="font-bold text-gray-800 mb-1">Category</h3>
+              <p className="text-gray-700 capitalize">{product.category}</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button asChild className="bg-green-700 hover:bg-green-800">
-              <Link href={`/quote?product=${product.id}`}>Request Quote</Link>
-            </Button>
-            <Button asChild variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
-              <Link href="/contact">Contact Sales Team</Link>
-            </Button>
+          <div className="flex space-x-4">
+            <Link
+              href={`/quote?product=${product.id}`}
+              className="bg-green-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-800 transition-colors text-center"
+            >
+              Request Quote
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-green-700 text-green-700 px-6 py-3 rounded-lg font-medium hover:bg-green-50 transition-colors text-center"
+            >
+              Contact Sales Team
+            </Link>            
           </div>
         </div>
       </div>
+
+      {/* Wheat-Specific Growing Recommendations */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold mb-6">Wheat Growing Recommendations</h2>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-green-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-3">Planting Guidelines for Wheat</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Optimal planting time: April to May for winter wheat</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Planting depth: 2-4 cm</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Row spacing: 15-20 cm</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Seeding rate: 100-120 kg/ha depending on variety</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Plant density: 250-350 plants per square meter</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="bg-green-50 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-3">Soil & Fertilizer Requirements</h3>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Prefers well-drained loamy soils with good organic matter</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Ideal soil pH: 6.0-7.5</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Basal fertilizer: Compound D (200-300 kg/ha) at planting</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Top dressing: Ammonium nitrate (150-200 kg/ha) at tillering stage</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">•</span>
+                <span>Additional potassium may be needed in sandy soils</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="mt-8 bg-green-50 p-6 rounded-lg">
+          <h3 className="text-xl font-semibold mb-3">Harvest & Post-Harvest</h3>
+          <ul className="space-y-2 text-gray-700 grid md:grid-cols-2 gap-4">
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Harvest when grain moisture content is 13-15%</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Use combine harvesters for efficient harvesting</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Dry immediately to 12% moisture for storage</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-2">•</span>
+              <span>Store in clean, dry conditions to prevent fungal growth</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Related Products Section */}
+      <div className="mt-16">
+        <h2 className="text-2xl font-bold mb-6">Other Wheat Varieties</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {wheatProducts
+            .filter(p => p.id !== product.id)
+            .map(relatedProduct => (
+              <Link 
+                key={relatedProduct.id}
+                href={`/products/wheat/${relatedProduct.id}`}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="relative h-48">
+                  <img 
+                    src={relatedProduct.image} 
+                    alt={relatedProduct.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="font-semibold">{relatedProduct.name}</h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">{relatedProduct.shortDescription}</p>
+                </div>
+              </Link>
+            ))
+          }
+        </div>
+      </div>
     </div>
-  )
+  );
 }
