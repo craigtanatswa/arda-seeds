@@ -117,4 +117,74 @@ export const wheatProducts: Product[] = [
 
 ]
 
+export const soybeanProducts: Product[] = [
+  {
+    id: "bimha",
+    name: "BIMHA",
+    category: "soybeans",
+    shortDescription: "Determinate broad-leafed soybean variety with high yields and excellent disease resistance.",
+    fullDescription:
+      "BIMHA is a determinate broad-leafed soybean variety recommended for grain production in all soybean growing areas. It features large yellow seeds with yellow hilum and offers high yields and grades. This variety has acceptable resistance to red leaf blotch, downy mildew, and bacterial blight, with moderate resistance to frog-eye leaf spot.",
+    maturity: "110-120 days",
+    yieldPotential: "3-4 t/ha",
+    features: [
+      "Determinate broad-leafed variety",
+      "Large yellow seeds with yellow hilum",
+      "Resistant to red leaf blotch, downy mildew, and bacterial blight",
+      "Moderately resistant to frog-eye leaf spot",
+      "High yields and excellent grades"
+    ],
+    regions: ["All soybean growing areas"],
+    image: "/images/soybeans-bimha.jpg",
+    featured: true,
+  },
+  {
+    id: "mhofu",
+    name: "MHOFU",
+    category: "soybeans",
+    shortDescription: "Broad-leafed determinate variety suitable for high, middle and lowveld areas.",
+    fullDescription:
+      "MHOFU is a broad-leafed determinate soybean variety specifically bred for grain production. It is suitable for high, middle and lowveld areas and matures in up to 126 days with good pod clearance from the ground. This variety shows moderate levels of resistance to leaf spot, red leaf blotch and bacterial blight, making it a reliable choice for various growing conditions.",
+    maturity: "126 days",
+    yieldPotential: "3-4 t/ha",
+    features: [
+      "Bred for grain production",
+      "Good pod clearance from ground",
+      "Moderate resistance to leaf spot, red leaf blotch and bacterial blight",
+      "Suitable for Highveld, Middleveld and Lowveld",
+      "Consistent high yields"
+    ],
+    regions: ["Highveld", "Middleveld", "Lowveld"],
+    image: "/images/soybeans-mhofu.jpg",
+    featured: true,
+  },
+];
+
+export const groundnutProducts: Product[] = [
+  {
+    id: "ilanda",
+    name: "Ilanda",
+    category: "groundnuts",
+    shortDescription: "Short-season groundnut variety with high pod yield potential.",
+    fullDescription:
+      "Ilanda is a short-season groundnut variety that matures in 90-100 days in lowveld areas and 100-120 days in middle/highveld regions. It features an erect/lax bunch growth habit with moderate tolerance to leaf spot diseases. This variety has no seed dormancy and is recommended for rain-fed production in warmer and drier areas of the country. Ilanda delivers high pod yields of up to 4t/ha and kernel yields of 2.8t/ha.",
+    maturity: "90-120 days (region dependent)",
+    yieldPotential: "4t/ha (pod yield), 2.8t/ha (kernel yield)",
+    features: [
+      "Short-season variety",
+      "Erect/lax bunch growth habit",
+      "Moderate tolerance to leaf spot diseases",
+      "No seed dormancy",
+      "High pod and kernel yields"
+    ],
+    regions: ["Lowveld", "Middleveld", "Highveld"],
+    image: "/images/groundnuts-ilanda.jpg",
+    featured: true,
+  },
+  // Add more groundnut varieties here as needed
+];
+
+
+
+
 // Add more product categories as needed
