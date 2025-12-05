@@ -21,7 +21,7 @@ export default function Home() {
           <div className="max-w-4xl text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Quality Seeds for Sustainable Agriculture</h1>
             <p className="text-xl md:text-2xl mb-8">
-              Providing farmers with high-yielding, disease-resistant seed varieties
+              Providing farmers with high-yielding Climate Smart seed varieties
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-green-700 hover:bg-green-800">
