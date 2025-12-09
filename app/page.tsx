@@ -1,39 +1,24 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import ProductCategoryCard from "@/components/product-category-card"
-import TestimonialCard from "@/components/testimonial-card"
-import { ArrowRight, Leaf, Sprout, FlaskRoundIcon as Flask } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import ProductCategoryCard from "@/components/product-category-card";
+import TestimonialCard from "@/components/testimonial-card";
+import { ArrowRight, Leaf, Sprout, FlaskRoundIcon as Flask } from "lucide-react";
+import { supabase } from "@/lib/supabaseClient";
+import HeroSlideshow from "@/components/hero-slideshow";
 
-export default function Home() {
+export default async function Home() {
+  // Fetch slideshow images from Supabase
+  const { data: slides } = await supabase
+    .from("hero_slides")
+    .select("*")
+    .order("sort_order", { ascending: true });
+
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative h-[600px] w-full">
-        <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Flyer%205-TQewVvNi9SgN7WLMppI7ui4CmipFy3.jpeg"
-          alt="ARDA Seeds field of crops"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white p-4">
-          <div className="max-w-4xl text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Quality Seeds for Sustainable Agriculture</h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Providing farmers with high-yielding Climate Smart seed varieties
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-green-700 hover:bg-green-800">
-                <Link href="/products">Explore Our Products</Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="bg-white text-green-800 hover:bg-gray-100">
-                <Link href="/quote">Request a Quote</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      {/* HERO SECTION — DB POWERED SLIDESHOW */}
+      <HeroSlideshow slides={slides ?? []} />
 
       {/* Product Categories */}
       <section className="py-16 px-4 bg-gray-50">
@@ -97,6 +82,7 @@ export default function Home() {
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
+
             <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
               <div className="bg-green-100 p-3 rounded-full mb-4">
                 <Flask className="h-8 w-8 text-green-700" />
@@ -109,6 +95,7 @@ export default function Home() {
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
+
             <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
               <div className="bg-green-100 p-3 rounded-full mb-4">
                 <Leaf className="h-8 w-8 text-green-700" />
@@ -167,5 +154,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
