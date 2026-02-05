@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ProductCategoryCard from "@/components/product-category-card";
 import TestimonialCard from "@/components/testimonial-card";
-import { ArrowRight, Leaf, Sprout, FlaskRoundIcon as Flask } from "lucide-react";
+import { ArrowRight, Leaf, Sprout, FlaskRoundIcon as Flask, Package } from "lucide-react";
 import { supabase } from "@/lib/supabaseClient";
 import HeroSlideshow from "@/components/hero-slideshow";
 
@@ -65,12 +65,12 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-8">
+            {/* Service 1 */}
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center md:w-1/2 lg:w-2/5">
               <div className="bg-green-100 p-3 rounded-full mb-4">
                 <Sprout className="h-8 w-8 text-green-700" />
               </div>
@@ -78,25 +78,13 @@ export default async function Home() {
               <p className="text-gray-600">
                 Partner with us for seed multiplication and production through our outgrower programs.
               </p>
-              <Link href="/services/outgrowing" className="mt-4 text-green-700 font-medium flex items-center">
+              <Link href="/services/outgrowing" className="mt-6 text-green-700 font-medium flex items-center justify-center">
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-              <div className="bg-green-100 p-3 rounded-full mb-4">
-                <Flask className="h-8 w-8 text-green-700" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">Soil Testing</h3>
-              <p className="text-gray-600">
-                Get comprehensive soil analysis to optimize your crop production and yield potential.
-              </p>
-              <Link href="/services/soil-testing" className="mt-4 text-green-700 font-medium flex items-center">
-                Learn more <ArrowRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
-
-            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+            
+            {/* Service 2 */}
+            <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center md:w-1/2 lg:w-2/5">
               <div className="bg-green-100 p-3 rounded-full mb-4">
                 <Leaf className="h-8 w-8 text-green-700" />
               </div>
@@ -104,7 +92,7 @@ export default async function Home() {
               <p className="text-gray-600">
                 Access expert advice on planting guides, pest control, and crop management.
               </p>
-              <Link href="/agronomy" className="mt-4 text-green-700 font-medium flex items-center">
+              <Link href="/agronomy" className="mt-6 text-green-700 font-medium flex items-center justify-center">
                 Learn more <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -147,7 +135,7 @@ export default async function Home() {
             <Button asChild size="lg" className="bg-white text-green-800 hover:bg-gray-100">
               <Link href="/register">Register as a Grower</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white hover:bg-green-800">
+            <Button asChild size="lg" variant="outline" className="bg-white text-green-800 hover:bg-gray-100">
               <Link href="/quote">Request a Quote</Link>
             </Button>
           </div>

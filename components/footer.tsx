@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="mb-4 relative h-12 w-40">
-              <Image src="/images/arda-logo-white.png" alt="ARDA Seeds Logo" fill className="object-contain" />
+              <Image src="/images/ardalogo.png" alt="ARDA Seeds Logo" fill className="object-contain" />
             </div>
             <p className="mb-4">
               ARDA Seeds is a leading supplier of high-quality agricultural seeds in Zimbabwe, providing farmers with
@@ -120,8 +120,8 @@ export default function Footer() {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 flex-shrink-0" />
-                <Link href="mailto:info@arda.co.zw" className="hover:text-green-400">
-                  info@arda.co.zw
+                <Link href="mailto:customerexperience@ardaseeds.co.zw" className="hover:text-green-400">
+                  customerexperience@ardaseeds.co.zw
                 </Link>
               </li>
             </ul>

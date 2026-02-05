@@ -12,7 +12,7 @@ export const maizeProducts: Product[] = [
     yieldPotential: "10t/ha",
     features: ["Early maturing variety", "Good disease tolerance", "Drought tolerant", "Low nitrogen tolerance"],
     regions: ["Low potential areas", "Medium potential areas", "High potential areas (late crop)"],
-    image: "/images/maize-zs263.jpg",
+    image: "/images/maize/greenmaize3D.jpg",
     featured: true,
   },
   {
@@ -182,6 +182,183 @@ export const groundnutProducts: Product[] = [
     featured: true,
   },
   // Add more groundnut varieties here as needed
+];
+
+export const sunflowerProducts: Product[] = [
+  {
+    id: "peredovic",
+    name: "PEREDOVIC",
+    category: "sunflower",
+    shortDescription: "Medium duration sunflower ideal for marginal production areas with up to 39% oil content.",
+    fullDescription:
+      "PEREDOVIC is a medium duration sunflower variety maturing in 100-115 days. It is ideal for marginal production areas and features soft seeds that are perfect for small scale oil presses such as the ram press. With an average plant height of 200cm, this variety offers high oil content of up to 39% and good adaptability to various growing conditions.",
+    maturity: "100-115 days",
+    yieldPotential: "0.8-2.5t/ha seed yield",
+    features: [
+      "Medium duration variety",
+      "Ideal for marginal production areas",
+      "Soft seeded for small scale oil presses",
+      "Up to 39% oil content",
+      "Average plant height: 200cm"
+    ],
+    regions: ["Marginal production areas", "Various ecological zones"],
+    image: "/images/sunflower-peredovic.jpg",
+    featured: true,
+  },
+  {
+    id: "msasa",
+    name: "MSASA",
+    category: "sunflower",
+    shortDescription: "Early maturing sunflower with up to 45% oil content and excellent adaptability.",
+    fullDescription:
+      "MSASA is an early maturing sunflower variety that reaches maturity in 80-90 days. It features soft seeds with exceptional oil content of up to 45%. With a moderate plant height of 150-170cm, this variety offers excellent adaptability to different growing conditions and high yield potential. MSASA is suitable for both small-scale and commercial sunflower production.",
+    maturity: "80-90 days",
+    yieldPotential: "Up to 2.5t/ha",
+    features: [
+      "Early maturing variety (80-90 days)",
+      "Soft seeded with up to 45% oil content",
+      "Plant height: 150-170cm",
+      "High yield potential",
+      "Excellent adaptability"
+    ],
+    regions: ["Various ecological zones", "All sunflower growing areas"],
+    image: "/images/sunflower-msasa.jpg",
+    featured: true,
+  },
+];
+
+// ===== COWPEAS =====
+export const cowpeaProducts: Product[] = [
+  {
+    id: "cbc1",
+    name: "CBC1",
+    category: "cowpeas",
+    shortDescription: "Early maturing dual purpose cowpea variety with high resistance to CABMV.",
+    fullDescription:
+      "CBC1 is an early maturing cowpea variety taking approximately 75 days to maturity. It is a dual purpose determinate variety with an upright and bushy growth habit. This variety exhibits high levels of resistance to cowpea aphids borne mosaic virus (CABMV). Recommended for regions III, IV & V, CBC1 offers reliable yields even in challenging conditions.",
+    maturity: "75 days",
+    yieldPotential: "1.5t/ha",
+    features: [
+      "Early maturing variety (75 days)",
+      "Dual purpose determinate variety",
+      "Upright and bushy growth habit",
+      "High resistance to cowpea aphids borne mosaic virus (CABMV)",
+      "Suitable for regions III, IV & V"
+    ],
+    regions: ["Region III", "Region IV", "Region V"],
+    image: "/images/cowpea-cbc1.jpg",
+    featured: true,
+  },
+  {
+    id: "cbc2",
+    name: "CBC2",
+    category: "cowpeas",
+    shortDescription: "Early maturing cowpea variety with upright growth habit and CABMV resistance.",
+    fullDescription:
+      "CBC2 is an early maturing cowpea variety taking 75-85 days to maturity. It is a determinate variety with an upright growth habit, making it suitable for mechanical harvesting. This variety shows high levels of resistance to cowpea aphids borne mosaic virus (CABMV) and is recommended for production in regions III, IV & V. CBC2 offers good yield potential for both grain and forage purposes.",
+    maturity: "75-85 days",
+    yieldPotential: "2.5t/ha",
+    features: [
+      "Early maturing variety (75-85 days)",
+      "Determinate with upright growth habit",
+      "High resistance to CABMV",
+      "Suitable for mechanical harvesting",
+      "Recommended for regions III, IV & V"
+    ],
+    regions: ["Region III", "Region IV", "Region V"],
+    image: "/images/cowpea-cbc2.jpg",
+    featured: true,
+  },
+];
+
+// ===== SUGAR BEANS =====
+export const sugarBeanProducts: Product[] = [
+  {
+    id: "nua45",
+    name: "NUA45",
+    category: "sugarbeans", // ← Make sure it's "sugarbeans" not "sugar-beans"
+    shortDescription: "Large seeded red mottled sugar bean variety with drought tolerance.",
+    fullDescription:
+      "NUA45 is a large seeded red mottled sugar bean variety that grows well across Zimbabwe. With a maturity period of 80-85 days, this drought tolerant variety offers excellent adaptability to various growing conditions. NUA45 exhibits a high level of tolerance to common bean rust and bacterial blight, making it a reliable choice for farmers seeking consistent yields.",
+    maturity: "80-85 days",
+    yieldPotential: "Up to 3t/ha",
+    features: [
+      "Large seeded red mottled variety",
+      "Drought tolerant",
+      "Grows well across Zimbabwe",
+      "High tolerance to common bean rust and bacterial blight",
+      "Early maturing (80-85 days)"
+    ],
+    regions: ["All regions of Zimbabwe", "Various ecological zones"],
+    image: "/images/sugarbean-nua45.jpg",
+    featured: true,
+  },
+  {
+    id: "gloria",
+    name: "GLORIA",
+    category: "sugarbeans", // ← Make sure it's "sugarbeans" not "sugar-beans"
+    shortDescription: "Early maturing sugar bean variety with semi-determinate growth habit.",
+    fullDescription:
+      "GLORIA is an early maturing sugar bean variety taking approximately 90 days to reach maturity. It features a semi-determinate growth habit and broad leaf determinate characteristics. This variety shows a high level of tolerance to common bean rust and bacterial diseases, making it suitable for various growing conditions across Zimbabwe.",
+    maturity: "Approximately 90 days",
+    yieldPotential: "Good yield potential",
+    features: [
+      "Early maturing variety (± 90 days)",
+      "Semi-determinate growth habit",
+      "Broad leaf determinate variety",
+      "High tolerance to common bean rust",
+      "Good disease resistance"
+    ],
+    regions: ["Various ecological zones", "All sugar bean growing areas"],
+    image: "/images/sugarbean-gloria.jpg",
+    featured: true,
+  },
+];
+
+// ===== SORGHUM =====
+export const sorghumProducts: Product[] = [
+  {
+    id: "macia",
+    name: "MACIA",
+    category: "sorghum",
+    shortDescription: "White Open Pollinated sorghum variety well adapted to regions IV & V.",
+    fullDescription:
+      "MACIA is a white Open Pollinated Variety sorghum that is well adapted to regions IV & V. This short to medium maturing variety takes 110-130 days to reach maturity. It features uniform short statured robust plants with bold compact heads, making it suitable for mechanical harvesting. MACIA offers good disease tolerance and reliable yield potential for challenging growing conditions.",
+    maturity: "110-130 days",
+    yieldPotential: "1.5-3t/ha",
+    features: [
+      "White Open Pollinated Variety",
+      "Well adapted to regions IV & V",
+      "Short to medium maturing (110-130 days)",
+      "Uniform short statured robust plants",
+      "Bold compact heads",
+      "Good disease tolerance"
+    ],
+    regions: ["Region IV", "Region V", "Drought prone areas"],
+    image: "/images/sorghum-macia.jpg",
+    featured: true,
+  },
+  {
+    id: "sv2-sv4",
+    name: "SV2/SV4",
+    category: "sorghum",
+    shortDescription: "White Open Pollinated sorghum adapted to regions I, II, III & IV.",
+    fullDescription:
+      "SV2/SV4 is a white Open Pollinated sorghum variety adapted to regions I, II, III & IV. This medium to late maturing variety features intermediate height plants with good disease tolerance. SV2/SV4 offers consistent yield potential and is suitable for both grain and forage production in various ecological zones across Zimbabwe.",
+    maturity: "Medium to late maturing",
+    yieldPotential: "3t/ha",
+    features: [
+      "White Open Pollinated Variety",
+      "Adapted to regions I, II, III & IV",
+      "Medium to late maturing variety",
+      "Intermediate height plants",
+      "Good disease tolerance",
+      "Suitable for grain and forage"
+    ],
+    regions: ["Region I", "Region II", "Region III", "Region IV"],
+    image: "/images/sorghum-sv2-sv4.jpg",
+    featured: true,
+  },
 ];
 
 

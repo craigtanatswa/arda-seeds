@@ -10,9 +10,9 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden">
-      <div className="relative h-48">
-        <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
+    <div className="group bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="relative h-72 bg-gray-50 p-4 overflow-hidden">
+        <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-contain transition-transform duration-300 ease-in-out group-hover:scale-110" />
       </div>
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">

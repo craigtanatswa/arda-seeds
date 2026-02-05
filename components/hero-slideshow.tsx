@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -63,7 +64,7 @@ export default function HeroSlideshow({ slides }: { slides: Array<{ id: string; 
               size="lg"
               className="bg-green-700 hover:bg-green-800"
             >
-              Explore Our Products
+              <Link href="/products">Explore Our Products</Link>
             </Button>
 
             <Button
@@ -71,7 +72,7 @@ export default function HeroSlideshow({ slides }: { slides: Array<{ id: string; 
               variant="outline"
               className="bg-white text-green-800 hover:bg-gray-100"
             >
-              Request a Quote
+              <Link href="/quote">Request a Quote</Link>
             </Button>
           </div>
         </div>

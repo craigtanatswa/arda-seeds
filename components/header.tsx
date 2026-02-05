@@ -50,9 +50,6 @@ export default function Header() {
                   <Link href="/products/sunflower">Sunflower</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/products/other">Other Crops</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
                   <Link href="/products">All Products</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -67,9 +64,6 @@ export default function Header() {
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
                   <Link href="/services/outgrowing">Outgrowing</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link href="/services/soil-testing">Soil Testing</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
