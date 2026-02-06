@@ -31,7 +31,7 @@ export const maizeProducts: Product[] = [
       "Good disease tolerance",
     ],
     regions: ["All maize growing areas", "Drought prone areas", "High potential areas"],
-    image: "/images/maize-zs265a.jpg",
+    image: "/images/maize/greenmaize3D.jpg",
     featured: false,
   },
   {
@@ -50,7 +50,7 @@ export const maizeProducts: Product[] = [
       "Suitable for all agro-ecological zones",
     ],
     regions: ["All country's agro-ecological zones"],
-    image: "/images/maize-zs269.jpg",
+    image: "/images/maize/greenmaize3D.jpg",
     featured: true,
   },
   {
@@ -69,7 +69,7 @@ export const maizeProducts: Product[] = [
       "Multiple cobbing (2-3 cobs per plant)",
     ],
     regions: ["All regions"],
-    image: "/images/maize-zs248a.jpg",
+    image: "/images/maize/greenmaize3D.jpg",
     featured: false,
   },
   {
@@ -88,7 +88,7 @@ export const maizeProducts: Product[] = [
       "Widely adapted to multiple regions",
     ],
     regions: ["Natural Region IIb", "Natural Region III", "Natural Region IV"],
-    image: "/images/maize-opv-zm-521.jpg",
+    image: "/images/maize/greenmaize3D.jpg",
     featured: false,
   },
 ]
@@ -111,7 +111,7 @@ export const wheatProducts: Product[] = [
       "Good disease resistance to Leaf Rust, Stem Rust and Powdery Mildew",
     ],
     regions: ["Highveld", "Middleveld", "Lowveld"],
-    image: "/images/wheat-ncema.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 
@@ -135,7 +135,7 @@ export const soybeanProducts: Product[] = [
       "High yields and excellent grades"
     ],
     regions: ["All soybean growing areas"],
-    image: "/images/soybeans-bimha.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   {
@@ -155,7 +155,7 @@ export const soybeanProducts: Product[] = [
       "Consistent high yields"
     ],
     regions: ["Highveld", "Middleveld", "Lowveld"],
-    image: "/images/soybeans-mhofu.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 ];
@@ -178,7 +178,7 @@ export const groundnutProducts: Product[] = [
       "High pod and kernel yields"
     ],
     regions: ["Lowveld", "Middleveld", "Highveld"],
-    image: "/images/groundnuts-ilanda.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   // Add more groundnut varieties here as needed
@@ -202,7 +202,7 @@ export const sunflowerProducts: Product[] = [
       "Average plant height: 200cm"
     ],
     regions: ["Marginal production areas", "Various ecological zones"],
-    image: "/images/sunflower-peredovic.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   {
@@ -222,7 +222,7 @@ export const sunflowerProducts: Product[] = [
       "Excellent adaptability"
     ],
     regions: ["Various ecological zones", "All sunflower growing areas"],
-    image: "/images/sunflower-msasa.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 ];
@@ -246,7 +246,7 @@ export const cowpeaProducts: Product[] = [
       "Suitable for regions III, IV & V"
     ],
     regions: ["Region III", "Region IV", "Region V"],
-    image: "/images/cowpea-cbc1.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   {
@@ -266,7 +266,7 @@ export const cowpeaProducts: Product[] = [
       "Recommended for regions III, IV & V"
     ],
     regions: ["Region III", "Region IV", "Region V"],
-    image: "/images/cowpea-cbc2.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 ];
@@ -290,7 +290,7 @@ export const sugarBeanProducts: Product[] = [
       "Early maturing (80-85 days)"
     ],
     regions: ["All regions of Zimbabwe", "Various ecological zones"],
-    image: "/images/sugarbean-nua45.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   {
@@ -310,7 +310,7 @@ export const sugarBeanProducts: Product[] = [
       "Good disease resistance"
     ],
     regions: ["Various ecological zones", "All sugar bean growing areas"],
-    image: "/images/sugarbean-gloria.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 ];
@@ -335,7 +335,7 @@ export const sorghumProducts: Product[] = [
       "Good disease tolerance"
     ],
     regions: ["Region IV", "Region V", "Drought prone areas"],
-    image: "/images/sorghum-macia.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
   {
@@ -356,7 +356,7 @@ export const sorghumProducts: Product[] = [
       "Suitable for grain and forage"
     ],
     regions: ["Region I", "Region II", "Region III", "Region IV"],
-    image: "/images/sorghum-sv2-sv4.jpg",
+    image: "/images/wheat/wheat3D.jpg",
     featured: true,
   },
 ];
