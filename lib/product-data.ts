@@ -233,16 +233,16 @@ export const cowpeaProducts: Product[] = [
     id: "cbc1",
     name: "CBC1",
     category: "cowpeas",
-    shortDescription: "Early maturing dual purpose cowpea variety with high resistance to CABMV.",
+    shortDescription: "Early maturing dual purpose Traditional African Pea variety with high resistance to CABMV.",
     fullDescription:
-      "CBC1 is an early maturing cowpea variety taking approximately 75 days to maturity. It is a dual purpose determinate variety with an upright and bushy growth habit. This variety exhibits high levels of resistance to cowpea aphids borne mosaic virus (CABMV). Recommended for regions III, IV & V, CBC1 offers reliable yields even in challenging conditions.",
+      "CBC1 is an early maturing Traditional African Pea variety taking approximately 75 days to maturity. It is a dual purpose determinate variety with an upright and bushy growth habit. This variety exhibits high levels of resistance to cowpea aphids borne mosaic virus (CABMV). Recommended for regions III, IV & V, CBC1 offers reliable yields even in challenging conditions.",
     maturity: "75 days",
     yieldPotential: "1.5t/ha",
     features: [
       "Early maturing variety (75 days)",
       "Dual purpose determinate variety",
       "Upright and bushy growth habit",
-      "High resistance to cowpea aphids borne mosaic virus (CABMV)",
+      "High resistance to Traditional African Pea aphids borne mosaic virus (CABMV)",
       "Suitable for regions III, IV & V"
     ],
     regions: ["Region III", "Region IV", "Region V"],

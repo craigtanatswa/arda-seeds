@@ -22,7 +22,7 @@ export default function AgronomyPage() {
             <Button asChild size="lg" className="bg-white text-green-800 hover:bg-gray-100">
               <a href="#planting-guides">Planting Guides</a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-green-800">
+            <Button asChild size="lg" variant="outline" className="bg-white text-green-800 hover:bg-gray-100">
               <a href="#pest-control">Pest & Disease Control</a>
             </Button>
           </div>
