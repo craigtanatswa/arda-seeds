@@ -56,7 +56,7 @@ export default function AgronomyPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full bg-green-700 hover:bg-green-800">
-                    <Link href="/agronomy/guides/maize">
+                    <Link href="/agronomy/guides/maizeguide">
                       View Guide <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -79,7 +79,7 @@ export default function AgronomyPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full bg-green-700 hover:bg-green-800">
-                    <Link href="/agronomy/guides/wheat">
+                    <Link href="/agronomy/guides/wheatguide">
                       View Guide <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
