@@ -1,14 +1,22 @@
-import type { Metadata } from "next"
+"use client"
+
+import { useState } from "react"
 import ProductCategoryList from "@/components/product-category-list"
 import ProductFilter from "@/components/product-filter"
 
-export const metadata: Metadata = {
-  title: "Products | ARDA Seeds",
-  description:
-    "Browse our complete catalog of high-quality agricultural seeds including maize, wheat, soybeans, groundnuts, and more.",
+export type FilterState = {
+  maturity: string[]
+  regions: string[]
+  traits: string[]
 }
 
 export default function ProductsPage() {
+  const [filters, setFilters] = useState<FilterState>({
+    maturity: [],
+    regions: [],
+    traits: [],
+  })
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-2">Our Products</h1>
@@ -16,10 +24,10 @@ export default function ProductsPage() {
 
       <div className="flex flex-col lg:flex-row gap-8">
         <div className="lg:w-1/4">
-          <ProductFilter />
+          <ProductFilter filters={filters} setFilters={setFilters} />
         </div>
         <div className="lg:w-3/4">
-          <ProductCategoryList />
+          <ProductCategoryList filters={filters} />
         </div>
       </div>
     </div>
