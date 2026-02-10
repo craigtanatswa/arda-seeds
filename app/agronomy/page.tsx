@@ -102,7 +102,7 @@ export default function AgronomyPage() {
                 </CardContent>
                 <CardFooter>
                   <Button asChild className="w-full bg-green-700 hover:bg-green-800">
-                    <Link href="/agronomy/guides/soybeans">
+                    <Link href="/agronomy/guides/soybeanguide">
                       View Guide <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
