@@ -16,7 +16,7 @@ export default function AboutPage() {
     <div>
       <div className="relative h-[300px] md:h-[400px]">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Flyer%205-TQewVvNi9SgN7WLMppI7ui4CmipFy3.jpeg"
+          src="/images/aboutus/aboutus-maize.jpg"
           alt="ARDA Seeds field"
           fill
           className="object-cover"
