@@ -122,24 +122,33 @@ export default function AboutPage() {
             </div>
           </TabsContent>
 
+
           <TabsContent value="team" className="pt-6">
             <h2 className="text-2xl font-bold mb-6 text-center">Our Leadership Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            
+            {/* Managing Director - Top Level */}
+            <div className="max-w-md mx-auto mb-12">
               <div className="text-center">
-                <div className="relative h-64 w-64 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image src="/images/managing-director.jpg" alt="Managing Director" fill className="object-cover" />
+                <div className="relative h-96 w-96 mx-auto mb-4 rounded-full overflow-hidden">
+                  <Image src="/images/aboutus/leadership/managing-director.png" alt="Managing Director" fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-semibold">John Doe</h3>
                 <p className="text-green-700 mb-2">Managing Director</p>
                 <p className="text-gray-700 text-sm">
-                  With over 25 years of experience in the agricultural sector, John leads our company with a vision for
-                  innovation and sustainable growth.
+                  With over two decades of dedicated service to the agricultural sector, our Managing Director Mr Wiseman Teta, brings a wealth of strategic and operational expertise to the helm of ARDA Seeds. His leadership is deeply rooted in his foundational five-year tenure as the General Manager of ARDA, where he played a pivotal role in revitalizing large-scale agricultural projects and streamlining national supply chains. This period was instrumental in shaping his holistic understanding of the industry; by navigating the complexities of high-level agricultural management, he developed a sharp reputation as a pragmatic problem-solver with an unwavering focus on food security and rural development.
+
+                    Beyond his technical credentials, he is defined by a "field-first" philosophy. He is a leader who firmly believes that the most valuable insights are found in the soil and through direct conversation with growers, rather than just on a balance sheet. This approach has fostered a corporate culture at ARDA Seeds that prioritizes integrity and seed purity above all else. Having guided organizations through various economic and climatic cycles, he possesses a visionary resilience and a calm, long-term perspective on agricultural investment that stabilizes the company's trajectory in a changing world.
+
+                    Under his guidance, ARDA Seeds has evolved from a traditional supplier into a true strategic partner for the farming community. His character is marked by a commitment to mentorship, as he remains dedicated to empowering the next generation of agronomists and researchers within the firm. Ultimately, his leadership is driven by a singular, guiding belief: that the strength of the nation is built upon the success of the farmer. By blending institutional knowledge with a modern, innovative mindset, he continues to ensure that every seed we produce is a promise of reliability and prosperity.
                 </p>
               </div>
+            </div>
 
+            {/* General Manager and Commercial Services Manager - Second Level */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
               <div className="text-center">
                 <div className="relative h-64 w-64 mx-auto mb-4 rounded-full overflow-hidden">
-                  <Image src="/images/general-manager.jpg" alt="General Manager" fill className="object-cover" />
+                  <Image src="/images/aboutus/leadership/general-manager.png" alt="General Manager" fill className="object-cover" />
                 </div>
                 <h3 className="text-xl font-semibold">Jane Smith</h3>
                 <p className="text-green-700 mb-2">General Manager</p>
@@ -152,7 +161,7 @@ export default function AboutPage() {
               <div className="text-center">
                 <div className="relative h-64 w-64 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
-                    src="/images/commercial-manager.jpg"
+                    src="/images//aboutus/leadership/corporate-services-manager.png"
                     alt="Commercial Services Manager"
                     fill
                     className="object-cover"
