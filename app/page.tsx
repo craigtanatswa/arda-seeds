@@ -296,20 +296,24 @@ export default async function Home() {
           {/* Trust Indicators */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2 stat-number">16+</div>
-              <p className="text-green-100 font-medium">Seed Varieties</p>
+              {/* Changed to text-white */}
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">16+</div>
+              <p className="text-green-50 font-medium">Seed Varieties</p>
             </div>
+            
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2 stat-number">1000+</div>
-              <p className="text-green-100 font-medium">Happy Farmers</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">1000+</div>
+              <p className="text-green-50 font-medium">Happy Farmers</p>
             </div>
+            
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2 stat-number">20+</div>
-              <p className="text-green-100 font-medium">Years Experience</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">20+</div>
+              <p className="text-green-50 font-medium">Years Experience</p>
             </div>
+            
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold mb-2 stat-number">5+</div>
-              <p className="text-green-100 font-medium">Partnerships</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2 text-white">5+</div>
+              <p className="text-green-50 font-medium">Partnerships</p>
             </div>
           </div>
         </div>
