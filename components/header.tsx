@@ -85,7 +85,7 @@ export default function Header() {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button asChild variant="outline" className="border-green-700 text-green-700 hover:bg-green-50">
-              <Link href="/quote">Place Order</Link>
+              <Link href="/quote">Order Seed</Link>
             </Button>
             <Button asChild className="bg-green-700 hover:bg-green-800">
               <Link href="/register">Grower Registration</Link>
