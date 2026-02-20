@@ -75,8 +75,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg mb-1">Phone</p>
-                    <p className="text-gray-600">0242 704924</p>
-                    <p className="text-gray-600">08010166</p>
+                    <p className="text-gray-600">0242 704 924/5</p>
+                    <p className="text-gray-600">+263 71 149 6082</p>
                   </div>
                 </div>
 
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg mb-1">Email</p>
-                    <p className="text-gray-600">info@arda.co.zw</p>
+                    <p className="text-gray-600">customer.experience@ardaseeds.co.zw</p>
                   </div>
                 </div>
 
@@ -114,15 +114,15 @@ export default function ContactPage() {
               </div>
               <div className="space-y-5">
                 <div className="partner-item bg-white p-4 rounded-xl">
-                  <p className="font-semibold text-lg mb-1">Farmer City</p>
+                  <p className="font-semibold text-lg mb-1">Farm and City</p>
                   <p className="text-gray-600">Multiple locations across Zimbabwe</p>
-                  <p className="text-gray-600 text-sm mt-1">Contact: 0242 XXXXXX</p>
+                  <p className="text-gray-600 text-sm mt-1">Contact: 0242 251 162</p>
                 </div>
 
                 <div className="partner-item bg-white p-4 rounded-xl">
                   <p className="font-semibold text-lg mb-1">Electrosales</p>
                   <p className="text-gray-600">Harare, Bulawayo, Mutare</p>
-                  <p className="text-gray-600 text-sm mt-1">Contact: 0242 XXXXXX</p>
+                  <p className="text-gray-600 text-sm mt-1">Contact: 08677222000</p>
                 </div>
 
                 <div className="partner-item bg-white p-4 rounded-xl">
