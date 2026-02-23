@@ -86,7 +86,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-lg mb-1">Email</p>
-                    <p className="text-gray-600">customer.experience@ardaseeds.co.zw</p>
+                    <p className="text-gray-600">customerexperience@ardaseeds.co.zw</p>
                   </div>
                 </div>
 
